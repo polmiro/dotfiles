@@ -11,6 +11,7 @@ Plug 'iCyMind/NeoSolarized'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
 
 " Helpers
 Plug 'qpkorr/vim-bufkill'
