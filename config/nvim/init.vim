@@ -134,6 +134,7 @@ set listchars=tab:▸\ ,eol:¬,trail:·
 set encoding=utf-8
 set clipboard+=unnamedplus
 set mouse=nir
+set nolist
 
 " Load settings
 so ~/.config/nvim/settings.vim
