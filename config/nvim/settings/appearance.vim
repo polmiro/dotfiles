@@ -1,9 +1,9 @@
 function! Light()
-  set background=light
+  execute "!light"
 endfunction
 
 function! Dark()
-  set background=dark
+  execute "!dark"
 endfunction
 
 colorscheme NeoSolarized
