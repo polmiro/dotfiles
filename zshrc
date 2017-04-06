@@ -6,17 +6,25 @@ export FZF_DEFAULT_COMMAND='ag -g ""' # Fzf ignores files in gitignore
 plugins=(vi-mode github docker tmux git rails rake ruby atom bundler colored-man colorize gem heroku node npm nvm zsh-autosuggestions fasd jira)
 source $ZSH/oh-my-zsh.sh
 
+changeItermProfileFromTmux() {
+  echo -e "\ePtmux;\e\033]50;SetProfile=$1\a\e\\"
+}
+
 changeZshTheme() {
   current_zsh_theme="agnoster-light"
   new_zsh_theme="agnoster"
   if [ "$1" '==' 'light' ]; then; current_zsh_theme="agnoster"; fi
   if [ "$1" '==' 'light' ]; then; new_zsh_theme="agnoster-light"; fi
-  sed -i.bak -e s/export\ ZSH_THEME=$current_zsh_theme/export\ ZSH_THEME=$new_zsh_theme/ ~/.zshrc
-  source ~/.zshrc
-}
+  sed -i.bak -e s/export\ ZSH_THEME=$current_zsh_theme$/export\ ZSH_THEME=$new_zsh_theme/ ~/.zshrc
 
-changeItermProfileFromTmux() {
-  echo -e "\ePtmux;\e\033]50;SetProfile=$1\a\e\\"
+  for window in `tmux list-windows -F '#I'`; do
+    for pane in $(tmux list-panes -t $window -F '#P'); do
+      pname=$(tmux display-message -t $window.$pane -p '#{pane_current_command}')
+      if [ "$pname" "=" "zsh" ]; then 
+        tmux send-keys -t $window.$pane "source ~/.zshrc" Enter
+      fi
+    done
+  done
 }
 
 changeVimBackground() {
@@ -24,11 +32,11 @@ changeVimBackground() {
   new_background="dark"
   if [ "$1" '==' 'light' ]; then; new_background="light"; fi
   sed -i.bak -e s/background=$current_background/background=$new_background/ ~/.config/nvim/settings/appearance.vim
+
   for window in `tmux list-windows -F '#I'`; do
     for pane in $(tmux list-panes -t $window -F '#P'); do
       pname=$(tmux display-message -t $window.$pane -p '#{pane_current_command}')
-      is_vim=$(printf $pname | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$')
-      if [ "$pname" "=" "nvim" ]; then 
+      if [ "$pname" "=" "nvim" ]; then
         tmux send-keys -t $window.$pane ":set background=$new_background" Enter
       fi
     done
