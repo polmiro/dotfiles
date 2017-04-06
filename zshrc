@@ -1,14 +1,11 @@
 export ZSH=/Users/polmiro/.oh-my-zsh
-COMPLETION_WAITING_DOTS="true"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
+export ZSH_THEME=
+export FZF_DEFAULT_COMMAND='ag -g ""' # Fzf ignores files in gitignore
 
+COMPLETION_WAITING_DOTS="true"
 plugins=(vi-mode github docker tmux git rails rake ruby atom bundler colored-man colorize gem heroku node npm nvm zsh-autosuggestions fasd jira)
 source $ZSH/oh-my-zsh.sh
-
-bindkey -v
-
-export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
-export ZSH_THEME=agnoster
-export FZF_DEFAULT_COMMAND='ag -g ""' # Fzf ignores files in gitignore
 
 changeItermProfileFromTmux() {
   echo -e "\ePtmux;\e\033]50;SetProfile=$1\a\e\\"
@@ -36,6 +33,10 @@ light() {
   changeItermProfileFromTmux light
 	changeVimBackground dark light
 }
+
+bindkey -v
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
 
 alias v="nvim"
 alias dcd="docker-compose -f docker/development/docker-compose.yml $1"
