@@ -3,7 +3,26 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export ZSH_THEME=agnoster
 export ZSH_CUSTOM=/Users/polmiro/.zsh-custom
 export FZF_DEFAULT_COMMAND='ag -g ""' # Fzf ignores files in gitignore
-plugins=(vi-mode github docker tmux git rails rake ruby atom bundler colored-man colorize gem heroku node npm nvm zsh-autosuggestions fasd jira)
+plugins=(
+  vi-mode
+  github
+  docker
+  tmux
+  git
+  rails
+  rake
+  ruby
+  bundler
+  colored-man
+  colorize
+  gem
+  heroku
+  node
+  npm
+  nvm
+  zsh-autosuggestions
+  fasd
+)
 source $ZSH/oh-my-zsh.sh
 
 changeItermProfileFromTmux() {
