@@ -28,8 +28,9 @@ changeZshTheme() {
 }
 
 changeVimBackground() {
-  current_background=$1
+  current_background="light"
   new_background="dark"
+  if [ "$1" '==' 'light' ]; then; current_background="dark"; fi
   if [ "$1" '==' 'light' ]; then; new_background="light"; fi
   sed -i.bak -e s/background=$current_background/background=$new_background/ ~/.config/nvim/settings/appearance.vim
 
