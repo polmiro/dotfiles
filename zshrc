@@ -3,6 +3,7 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export ZSH_THEME=agnoster
 export ZSH_CUSTOM=/Users/polmiro/.zsh-custom
 export FZF_DEFAULT_COMMAND='ag -g ""' # Fzf ignores files in gitignore
+export KEYTIMEOUT=1
 plugins=(
   vi-mode
   github
