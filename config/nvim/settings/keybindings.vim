@@ -34,3 +34,7 @@ map  <c-F> :NERDTreeFind<CR>
 " Deoplete
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+" Move buffers
+map <leader>x :bn<cr>
+map <leader>z :bp<cr>
+
