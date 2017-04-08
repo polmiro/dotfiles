@@ -21,10 +21,11 @@ plugins=(
   node
   npm
   nvm
-  zsh-autosuggestions
   fasd
+  zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=default"
 
 changeItermProfileFromTmux() {
   echo -e "\ePtmux;\e\033]50;SetProfile=$1\a\e\\"
