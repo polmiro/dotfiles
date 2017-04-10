@@ -23,6 +23,7 @@ plugins=(
   nvm
   fasd
   zsh-syntax-highlighting
+  history-substring-search
 )
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=default"
@@ -80,6 +81,10 @@ light() {
 bindkey -v
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 alias v="nvim"
 alias dcd="docker-compose -f docker/development/docker-compose.yml $1"
