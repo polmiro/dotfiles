@@ -29,6 +29,9 @@ Plug 'tpope/vim-git'
 " Languages
 Plug 'jtratner/vim-flavored-markdown'
 Plug 'skwp/vim-html-escape'
+Plug 'elixir-lang/vim-elixir'
+Plug 'thinca/vim-ref'
+Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 
 " Project
 Plug 'jistr/vim-nerdtree-tabs'
