@@ -1,6 +1,13 @@
+" Deoplete
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
+
 "vim-tmux-navigation"
 " Don't allow any default key-mappings.
 let g:tmux_navigator_no_mappings = 1
+
+"vim-multi-cursors"
+" Don't allow any default key-mappings.
+let g:multi_cursor_use_default_mapping=0
 
 " Re-enable tmux_navigator.vim default bindings, minus <c-\>.
 " <c-\> conflicts with NERDTree "current file".
@@ -31,10 +38,9 @@ nnoremap <silent> ,ag :Ag<CR>
 map  <c-N> :NERDTreeTabsToggle<CR>
 map  <c-F> :NERDTreeFind<CR>
 
-" Deoplete
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
 " Move buffers
 map <leader>x :bn<cr>
 map <leader>z :bp<cr>
 
+let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_quit_key='<Esc>'
