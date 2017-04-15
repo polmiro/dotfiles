@@ -136,7 +136,7 @@ set sidescroll=1
 set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:·
 set encoding=utf-8
-set clipboard+=unnamedplus
+set clipboard=unnamed
 set mouse=nir
 set nolist
 
