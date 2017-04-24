@@ -41,6 +41,3 @@ map  <c-F> :NERDTreeFind<CR>
 " Move buffers
 map <leader>x :bn<cr>
 map <leader>z :bp<cr>
-
-let g:multi_cursor_next_key='<C-d>'
-let g:multi_cursor_quit_key='<Esc>'
