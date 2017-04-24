@@ -21,4 +21,9 @@ function! MyFilename()
        \ ('' != expand('%') ? expand('%') : '[NoName]')
 endfunction
 
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
