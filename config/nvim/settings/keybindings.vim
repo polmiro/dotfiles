@@ -1,11 +1,11 @@
 " Deoplete
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
 
-"vim-tmux-navigation"
+" vim-tmux-navigation"
 " Don't allow any default key-mappings.
 let g:tmux_navigator_no_mappings = 1
 
-"vim-multi-cursors"
+" vim-multi-cursors"
 " Don't allow any default key-mappings.
 let g:multi_cursor_use_default_mapping=0
 
@@ -18,7 +18,6 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
-"
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
@@ -41,3 +40,6 @@ map  <c-F> :NERDTreeFind<CR>
 " Move buffers
 map <leader>x :bn<cr>
 map <leader>z :bp<cr>
+
+" Trim whitespace
+map <leader>w :call TrimWhiteSpace()<CR>
