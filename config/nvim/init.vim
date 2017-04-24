@@ -32,7 +32,7 @@ Plug 'jtratner/vim-flavored-markdown'
 Plug 'skwp/vim-html-escape'
 Plug 'elixir-lang/vim-elixir'
 Plug 'thinca/vim-ref'
-Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+Plug 'slashmili/alchemist.vim'
 
 " Project
 Plug 'jistr/vim-nerdtree-tabs'
@@ -81,7 +81,7 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
+" The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
 
