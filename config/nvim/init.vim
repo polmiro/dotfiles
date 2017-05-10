@@ -140,6 +140,8 @@ set clipboard=unnamed
 set mouse=nir
 set nolist
 
+" Faster highlight for ruby files at least
+set lazyredraw
+
 " Load settings
 so ~/.config/nvim/settings.vim
-
