@@ -1,3 +1,5 @@
+export GOPATH=/users/polmiro/go
+export PATH="$GOPATH/bin:$PATH"
 export ZSH=/Users/polmiro/.oh-my-zsh
 export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export ZSH_THEME=agnoster
@@ -42,7 +44,7 @@ changeZshTheme() {
   for window in `tmux list-windows -F '#I'`; do
     for pane in $(tmux list-panes -t $window -F '#P'); do
       pname=$(tmux display-message -t $window.$pane -p '#{pane_current_command}')
-      if [ "$pname" "=" "zsh" ]; then 
+      if [ "$pname" "=" "zsh" ]; then
         tmux send-keys -t $window.$pane "source ~/.zshrc" Enter
       fi
     done
