@@ -80,6 +80,10 @@ light() {
   changeVimBackground light
 }
 
+fbr () {
+  git checkout $(git for-each-ref --sort=-committerdate refs/heads/ | awk '{print $3}' | cut -c $(echo " refs/head/" | wc -c)- | fzf-tmux)
+}
+
 bindkey -v
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
