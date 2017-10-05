@@ -99,3 +99,5 @@ alias dsd="docker-compose -f docker/sandbox/docker-compose.yml $1"
 alias oldvim="vim"
 alias vim="nvim"
 alias gitbranchcleanup="!git branch --merged | grep  -v '\\*\\|^\\s*\\(master\\|staging\\)$' | xargs -n 1 git branch -d"
+alias dc="docker-compose $1"
+
