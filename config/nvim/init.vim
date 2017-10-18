@@ -33,6 +33,7 @@ Plug 'skwp/vim-html-escape'
 Plug 'elixir-lang/vim-elixir'
 Plug 'thinca/vim-ref'
 Plug 'slashmili/alchemist.vim'
+Plug 'wannesm/wmgraphviz.vim'
 
 " Project
 Plug 'jistr/vim-nerdtree-tabs'
