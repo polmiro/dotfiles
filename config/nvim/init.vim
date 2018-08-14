@@ -11,7 +11,7 @@ Plug 'iCyMind/NeoSolarized'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 
 " Helpers
 Plug 'qpkorr/vim-bufkill'
@@ -26,11 +26,13 @@ Plug 'terryma/vim-multiple-cursors'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-rhubarb'
 
 " Languages
 Plug 'jtratner/vim-flavored-markdown'
 Plug 'skwp/vim-html-escape'
 Plug 'elixir-lang/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 Plug 'thinca/vim-ref'
 Plug 'slashmili/alchemist.vim'
 Plug 'wannesm/wmgraphviz.vim'

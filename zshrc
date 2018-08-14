@@ -1,3 +1,4 @@
+export EDITOR=vim
 export GOPATH=/users/polmiro/go
 export PATH="$GOPATH/bin:$PATH"
 export ZSH=/Users/polmiro/.oh-my-zsh
@@ -26,6 +27,7 @@ plugins=(
   fasd
   zsh-syntax-highlighting
   history-substring-search
+  zsh-iterm-touchbar
 )
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=default"
@@ -93,9 +95,9 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
 alias v="nvim"
-alias dcd="docker-compose -f docker/development/docker-compose.yml $1"
-alias dtd="docker-compose -f docker/test/docker-compose.yml $1"
-alias dsd="docker-compose -f docker/sandbox/docker-compose.yml $1"
+alias dcd="docker-compose -f docker-compose.yml -f docker-compose.dev.yml $1"
+alias dcd="docker-compose -f docker-compose.yml -f docker-compose.dev.yml $1"
+alias dsd="docker-compose -f docker-compose.yml -f docker-compose.sandbox.yml $1"
 alias oldvim="vim"
 alias vim="nvim"
 alias gitbranchcleanup="!git branch --merged | grep  -v '\\*\\|^\\s*\\(master\\|staging\\)$' | xargs -n 1 git branch -d"
