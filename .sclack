@@ -1,0 +1,6 @@
+{
+    "workspaces": {
+        "default": "traxretail",
+        "quri": "quri"
+    }
+}

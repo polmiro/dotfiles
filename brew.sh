@@ -17,3 +17,13 @@ brew cask install\
   skype\
   font-fira-code
 
+brew cask install\
+  qlcolorcode
+  qlstephen
+  qlmarkdown
+  quicklook-json
+  qlimagesize
+  webpquicklook
+  suspicious-package
+  quicklookase
+  qlvideo
