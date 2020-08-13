@@ -59,14 +59,10 @@ changeVimBackground() {
   new_background="dark"
   if [ "$1" '==' 'light' ]; then; current_background="dark"; fi
   if [ "$1" '==' 'light' ]; then; new_background="light"; fi
-  sed -i.bak -e s/background=$current_background/background=$new_background/ ~/.config/nvim/settings/appearance.vim
 
   for window in `tmux list-windows -F '#I'`; do
     for pane in $(tmux list-panes -t $window -F '#P'); do
       pname=$(tmux display-message -t $window.$pane -p '#{pane_current_command}')
-      if [ "$pname" "=" "nvim" ]; then
-        tmux send-keys -t $window.$pane ":set background=$new_background" Enter
-      fi
     done
   done
 }
@@ -95,12 +91,9 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-alias v="nvim"
 alias dcd="docker-compose -f docker-compose.yml -f docker-compose.dev.yml $1"
 alias dcd="docker-compose -f docker-compose.yml -f docker-compose.dev.yml $1"
 alias dsd="docker-compose -f docker-compose.yml -f docker-compose.sandbox.yml $1"
-alias oldvim="vim"
-alias vim="nvim"
 alias gitbranchcleanup="!git branch --merged | grep  -v '\\*\\|^\\s*\\(master\\|staging\\)$' | xargs -n 1 git branch -d"
 alias dc="docker-compose $1"
 
