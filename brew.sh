@@ -1,4 +1,8 @@
 brew tap homebrew/cask-fonts
+brew install font-fira-code
+
+brew tap thoughtbot/formulae
+brew install rcm
 
 brew cask install\
   spectacle\
@@ -13,8 +17,9 @@ brew cask install\
   flux\
   discord\
   skype\
-  font-fira-code\
-  visual-studio-code
+  visual-studio-code\
+  miro\
+  postman
 
 brew cask install\
   qlcolorcode
