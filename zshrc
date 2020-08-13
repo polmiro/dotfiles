@@ -17,7 +17,7 @@ plugins=(
   rake
   ruby
   bundler
-  colored-man
+  colored-man-pages
   colorize
   gem
   heroku
@@ -25,12 +25,13 @@ plugins=(
   npm
   nvm
   fasd
-  zsh-syntax-highlighting
   history-substring-search
-  zsh-iterm-touchbar
 )
-source $ZSH/oh-my-zsh.sh
+
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=default"
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+
+source $ZSH/oh-my-zsh.sh
 
 changeItermProfileFromTmux() {
   echo -e "\ePtmux;\e\033]50;SetProfile=$1\a\e\\"

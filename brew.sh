@@ -21,7 +21,8 @@ brew cask install\
   skype\
   visual-studio-code\
   miro\
-  postman
+  postman\
+  zsh-syntax-highlighting
 
 brew cask install\
   qlcolorcode
