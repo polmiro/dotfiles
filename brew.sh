@@ -1,21 +1,20 @@
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 brew cask install\
   spectacle\
   slack\
-  tmux\
   iterm2\
-  seil\
   dropbox\
   google-chrome\
-  spotify transmission\
+  spotify\
+  transmission\
   vlc\
   caffeine\
   flux\
   discord\
-  postico\
   skype\
-  font-fira-code
+  font-fira-code\
+  visual-studio-code
 
 brew cask install\
   qlcolorcode
