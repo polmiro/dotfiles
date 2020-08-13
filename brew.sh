@@ -1,6 +1,8 @@
 brew tap homebrew/cask-fonts
 brew install font-fira-code
 
+brew install tmux tmuxinator
+
 brew tap thoughtbot/formulae
 brew install rcm
 
