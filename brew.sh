@@ -1,7 +1,7 @@
 brew tap homebrew/cask-fonts
 brew install font-fira-code
 
-brew install tmux tmuxinator java
+brew install tmux tmuxinator graphviz
 
 brew tap thoughtbot/formulae && brew install rcm
 
@@ -26,7 +26,8 @@ brew cask install\
   zsh-syntax-highlighting\
   pgcli\
   heroku\
-  sequel-pro
+  sequel-pro\
+  java
 
 brew cask install\
   qlcolorcode
