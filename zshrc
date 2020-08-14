@@ -1,3 +1,5 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 export EDITOR=vim
 export GOPATH=/users/polmiro/go
 export PATH="$GOPATH/bin:$PATH"
@@ -6,6 +8,7 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export ZSH_THEME=agnoster
 export ZSH_CUSTOM=/Users/polmiro/.zsh-custom
 export FZF_DEFAULT_COMMAND='ag -g ""' # Fzf ignores files in gitignore
+export DEFAULT_USER=polmiro
 export KEYTIMEOUT=1
 plugins=(
   vi-mode
@@ -97,3 +100,7 @@ alias dsd="docker-compose -f docker-compose.yml -f docker-compose.sandbox.yml $1
 alias gitbranchcleanup="!git branch --merged | grep  -v '\\*\\|^\\s*\\(master\\|staging\\)$' | xargs -n 1 git branch -d"
 alias dc="docker-compose $1"
 
+. /Library/Python/3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+
+. /usr/local/opt/asdf/asdf.sh

@@ -5,6 +5,7 @@ brew install tmux tmuxinator
 
 brew tap thoughtbot/formulae
 brew install rcm
+brew install java
 
 brew cask install\
   spectacle\
@@ -22,7 +23,10 @@ brew cask install\
   visual-studio-code\
   miro\
   postman\
-  zsh-syntax-highlighting
+  zsh-syntax-highlighting\
+  pgcli\
+  heroku\
+  sequel-pro
 
 brew cask install\
   qlcolorcode
@@ -34,3 +38,5 @@ brew cask install\
   suspicious-package
   quicklookase
   qlvideo
+
+pip3 install powerline-status
