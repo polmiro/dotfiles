@@ -1,11 +1,11 @@
 brew tap homebrew/cask-fonts
 brew install font-fira-code
 
-brew install tmux tmuxinator
+brew install tmux tmuxinator java
 
-brew tap thoughtbot/formulae
-brew install rcm
-brew install java
+brew tap thoughtbot/formulae && brew install rcm
+
+brew tap heroku/brew && brew install heroku
 
 brew cask install\
   spectacle\
