@@ -29,3 +29,6 @@ root: ~/
 
 windows:
   - spine: cd ~/Development/spine
+  - pocket_change: cd ~/Development/pocket_change
+  - garage: cd ~/Development/garage
+
