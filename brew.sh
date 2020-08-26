@@ -27,7 +27,9 @@ brew cask install\
   pgcli\
   heroku\
   sequel-pro\
-  java
+  java\
+  mongodb-compass\
+  vault
 
 brew cask install\
   qlcolorcode
