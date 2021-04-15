@@ -2,9 +2,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export EDITOR=vim
 export GOPATH=/users/polmiro/go
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
-export ZSH=/Users/polmiro/.oh-my-zsh
 export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
+export ZSH=/Users/polmiro/.oh-my-zsh
 export ZSH_THEME=agnoster
 export ZSH_CUSTOM=/Users/polmiro/.zsh-custom
 export FZF_DEFAULT_COMMAND='ag -g ""' # Fzf ignores files in gitignore
@@ -30,7 +31,6 @@ plugins=(
   fasd
   history-substring-search
 )
-
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=default"
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
