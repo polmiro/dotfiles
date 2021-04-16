@@ -100,7 +100,7 @@ alias dsd="docker-compose -f docker-compose.yml -f docker-compose.sandbox.yml $1
 alias gitbranchcleanup="!git branch --merged | grep  -v '\\*\\|^\\s*\\(master\\|staging\\)$' | xargs -n 1 git branch -d"
 alias dc="docker-compose $1"
 
-. /Library/Python/3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /Library/Python/3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
 . /usr/local/opt/asdf/asdf.sh
