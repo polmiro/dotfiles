@@ -43,3 +43,5 @@ brew cask install\
   qlvideo
 
 pip3 install powerline-status
+
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
